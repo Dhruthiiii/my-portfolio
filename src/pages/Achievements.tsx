@@ -12,46 +12,52 @@ interface Achievement {
 const Achievements = () => {
   const achievements: Achievement[] = [
     {
+      year: "2024",
+      title: "EC-Council Certified Ethical Hacker",
+      description: "Earned the industry-standard certification for ethical hacking and penetration testing methodologies.",
+      icon: "award"
+    },
+    {
       year: "2023",
-      title: "Best Web Application Award",
-      description: "Received recognition for developing an innovative web application that improved user engagement by 40%.",
+      title: "Maize Disease Detection Model",
+      description: "Achieved 94% accuracy in detecting Maize Leaf Diseases using Mask R-CNN model at ICRISAT.",
+      icon: "file-text"
+    },
+    {
+      year: "2022",
+      title: "Microsoft Certified Security, Compliance, and Identity Fundamentals",
+      description: "Earned Microsoft certification in security fundamentals and compliance protocols.",
       icon: "award"
     },
     {
       year: "2022",
-      title: "Speaker at React Conference",
-      description: "Invited as a guest speaker to present advanced React patterns at the annual developers conference.",
-      icon: "article"
-    },
-    {
-      year: "2022",
-      title: "Open Source Contributor",
-      description: "Contributed to multiple React libraries with over 10,000 stars on GitHub.",
-      icon: "file-text"
+      title: "Neural Networks Certification",
+      description: "Completed comprehensive training in neural networks from Coursera.",
+      icon: "book"
     },
     {
       year: "2021",
-      title: "Certified Web Accessibility Specialist",
-      description: "Earned certification for implementing inclusive design principles and WCAG compliance.",
+      title: "CyberSecurity Certification",
+      description: "Completed cybersecurity certification from IIT Kharagpur and RINEX.",
       icon: "award"
     },
     {
       year: "2020",
-      title: "Published JavaScript E-book",
-      description: "Authored a comprehensive guide on modern JavaScript practices that received over 5,000 downloads.",
+      title: "Data Science for Engineers Certification",
+      description: "Completed NPTEL certification in Data Science methodologies for engineering applications.",
+      icon: "award"
+    },
+    {
+      year: "2020",
+      title: "Social Networks for Engineers Certification",
+      description: "Earned NPTEL certification in social network analysis and applications.",
       icon: "book"
     },
     {
       year: "2019",
-      title: "Tech Mentor of the Year",
-      description: "Recognized for mentoring junior developers and conducting workshops on web development.",
+      title: "Preliminary in BEC",
+      description: "Achieved preliminary level in Business English Certificate from Cambridge.",
       icon: "award"
-    },
-    {
-      year: "2018",
-      title: "Startup Launch Success",
-      description: "Successfully launched and scaled a web application that achieved 10,000 monthly active users.",
-      icon: "home"
     }
   ];
 
@@ -75,7 +81,7 @@ const Achievements = () => {
             <div className="max-w-3xl mx-auto">
               <h1 className="text-4xl font-bold font-display mb-4">Achievements</h1>
               <p className="text-muted-foreground mb-12">
-                A timeline of professional accomplishments, awards, and milestones throughout my career.
+                A timeline of professional certifications, awards, and milestones throughout my career.
               </p>
               
               {/* Timeline */}
@@ -146,45 +152,39 @@ const Achievements = () => {
           </div>
         </section>
         
-        {/* Certifications */}
+        {/* Leadership and Extra-Curricular */}
         <section className="py-16 bg-secondary/50 dark:bg-secondary/10">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto">
-              <h2 className="text-3xl font-bold font-display mb-8 text-center">Certifications</h2>
+              <h2 className="text-3xl font-bold font-display mb-8 text-center">Leadership & Extra-Curricular</h2>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {[
                   {
-                    name: "Advanced React Development",
-                    issuer: "Frontend Masters",
-                    date: "2022",
-                    credential: "CERT-12345"
+                    name: "All India Radio - Akasavani",
+                    role: "Active Member",
+                    period: "May 2024 - Current",
+                    description: "Creating content and engaging in live broadcasts."
                   },
                   {
-                    name: "Web Accessibility",
-                    issuer: "W3C",
-                    date: "2021",
-                    credential: "CERT-67890"
+                    name: "Udaan - KMIT's R&D",
+                    role: "Member",
+                    period: "Jan 2023 - June 2023",
+                    description: "Contributed to research and development projects, offering innovative ideas and solutions to advance technology."
                   },
                   {
-                    name: "Full Stack Development",
-                    issuer: "Udacity",
-                    date: "2020",
-                    credential: "CERT-24680"
-                  },
-                  {
-                    name: "UX Design Fundamentals",
-                    issuer: "Interaction Design Foundation",
-                    date: "2019",
-                    credential: "CERT-13579"
+                    name: "Aalap - KMIT's Music Club",
+                    role: "Member",
+                    period: "August 2019 - July 2023",
+                    description: "Organized and performed at music events, fostering a vibrant community and showcasing musical talents."
                   }
-                ].map((cert, index) => (
+                ].map((activity, index) => (
                   <div key={index} className="bg-background border border-border rounded-lg p-6">
-                    <h3 className="text-lg font-semibold mb-2">{cert.name}</h3>
-                    <div className="text-sm text-muted-foreground">
-                      <p>{cert.issuer}</p>
-                      <p>Issued: {cert.date}</p>
-                      <p>Credential ID: {cert.credential}</p>
+                    <h3 className="text-lg font-semibold mb-2">{activity.name}</h3>
+                    <div className="text-sm">
+                      <p className="text-primary font-medium">{activity.role}</p>
+                      <p className="text-muted-foreground mb-2">{activity.period}</p>
+                      <p>{activity.description}</p>
                     </div>
                   </div>
                 ))}

@@ -1,12 +1,12 @@
 
 import { Button } from "./ui/button";
-import { Link } from "react-router-dom";
+import { SocialIcons } from "./SocialIcons";
 
 export const HeroSection = () => {
   return (
     <section className="min-h-screen pt-24 pb-16 flex items-center">
       <div className="container mx-auto px-4">
-        <div className="flex flex-col items-start">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="animate-fade-in max-w-3xl">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-display tracking-tight mb-4">
               Dhruthi Sowmya Gundavarapu
@@ -16,7 +16,7 @@ export const HeroSection = () => {
               Specializing in Application Security, vulnerability management, and system optimization. 
               Dedicated to creating secure and efficient solutions.
             </p>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-4 mb-6">
               <Button asChild size="lg" className="rounded-md">
                 <a href="mailto:sreesowmyavinod@gmail.com" className="flex items-center">
                   Contact Me
@@ -30,6 +30,16 @@ export const HeroSection = () => {
                   LinkedIn Profile
                 </a>
               </Button>
+            </div>
+            <SocialIcons />
+          </div>
+          <div className="md:w-1/3 flex justify-center md:justify-end">
+            <div className="relative w-full max-w-md">
+              <img 
+                src="/lovable-uploads/00d1a245-ae9a-45b9-9f77-82293a390daa.png" 
+                alt="Dhruthi Sowmya" 
+                className="w-full h-auto rounded-lg shadow-xl"
+              />
             </div>
           </div>
         </div>

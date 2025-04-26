@@ -1,15 +1,9 @@
 
-import { Github, Twitter, Linkedin, Instagram } from "lucide-react";
+import { Github, Linkedin } from "lucide-react";
 import { Button } from "./ui/button";
 
 export const SocialIcons = () => {
   const socialLinks = [
-    { 
-      icon: <Twitter size={18} />, 
-      href: "https://twitter.com",
-      label: "Twitter",
-      color: "text-[#1DA1F2] dark:text-[#1DA1F2]"
-    },
     { 
       icon: <Github size={18} />, 
       href: "https://github.com/Dhruthi",
@@ -21,12 +15,6 @@ export const SocialIcons = () => {
       href: "https://www.linkedin.com/in/gundavarapu-dhruthi",
       label: "LinkedIn",
       color: "text-[#0A66C2] dark:text-[#0A66C2]" 
-    },
-    { 
-      icon: <Instagram size={18} />, 
-      href: "https://instagram.com",
-      label: "Instagram",
-      color: "text-[#E4405F] dark:text-[#E4405F]" 
     }
   ];
 

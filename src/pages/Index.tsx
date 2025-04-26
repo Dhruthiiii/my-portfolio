@@ -67,14 +67,14 @@ const Index = () => {
         {/* Featured Projects */}
         <section className="py-16 bg-secondary/50 dark:bg-secondary/10">
           <div className="container mx-auto px-4">
-            <div className="mb-10 flex justify-between items-end">
+            <div className="mb-10 flex flex-col md:flex-row justify-between items-start md:items-end">
               <div>
                 <h2 className="text-3xl font-bold font-display mb-2">Featured Projects</h2>
                 <p className="text-muted-foreground max-w-2xl">
                   Explore my recent work that showcases my development and security skills
                 </p>
               </div>
-              <Button asChild variant="ghost" className="hidden md:flex">
+              <Button asChild variant="ghost" className="hidden md:flex mt-4 md:mt-0">
                 <Link to="/projects">
                   View all projects <span className="ml-2">→</span>
                 </Link>
@@ -128,14 +128,14 @@ const Index = () => {
         {/* Featured Articles */}
         <section className="py-16">
           <div className="container mx-auto px-4">
-            <div className="mb-10 flex justify-between items-end">
+            <div className="mb-10 flex flex-col md:flex-row justify-between items-start md:items-end">
               <div>
                 <h2 className="text-3xl font-bold font-display mb-2">Latest Articles</h2>
                 <p className="text-muted-foreground max-w-2xl">
                   Technical articles, tutorials, and insights on cybersecurity and development
                 </p>
               </div>
-              <Button asChild variant="ghost" className="hidden md:flex">
+              <Button asChild variant="ghost" className="hidden md:flex mt-4 md:mt-0">
                 <Link to="/articles">
                   View all articles <span className="ml-2">→</span>
                 </Link>
@@ -144,7 +144,9 @@ const Index = () => {
             
             <div className="max-w-3xl mx-auto">
               {featuredArticles.map((article) => (
-                <ArticleCard key={article.id} article={article} />
+                <Link to={`/articles`} key={article.id}>
+                  <ArticleCard article={article} />
+                </Link>
               ))}
             </div>
             
