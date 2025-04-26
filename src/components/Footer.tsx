@@ -12,7 +12,7 @@ export const Footer = () => {
           <div className="mb-6 md:mb-0">
             <Link to="/" className="text-lg font-bold font-display">
               <div className="flex items-center justify-center w-8 h-8 rounded-full bg-foreground text-background">
-                AR
+                GS
               </div>
             </Link>
             <p className="text-sm text-muted-foreground mt-2">
@@ -25,7 +25,7 @@ export const Footer = () => {
               <SocialIcons />
             </div>
             <p className="text-sm text-muted-foreground">
-              © {year} Anna Reynolds. All rights reserved.
+              © {year} Dhruthi Sowmya Gundavarapu. All rights reserved.
             </p>
           </div>
         </div>
