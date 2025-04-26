@@ -12,13 +12,13 @@ export const SocialIcons = () => {
     },
     { 
       icon: <Github size={18} />, 
-      href: "https://github.com",
+      href: "https://github.com/Dhruthi",
       label: "GitHub",
       color: "text-black dark:text-white" 
     },
     { 
       icon: <Linkedin size={18} />, 
-      href: "https://linkedin.com",
+      href: "https://www.linkedin.com/in/gundavarapu-dhruthi",
       label: "LinkedIn",
       color: "text-[#0A66C2] dark:text-[#0A66C2]" 
     },

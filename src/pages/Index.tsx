@@ -9,45 +9,51 @@ import { ArticleCard, ArticleProps } from "@/components/ArticleCard";
 const featuredProjects = [
   {
     id: "1",
-    title: "E-Commerce Platform",
-    description: "A fully responsive e-commerce platform built with React, Node.js, and MongoDB",
+    title: "Attack Surface Monitoring Tool",
+    description: "Developed an interactive UI for a comprehensive security monitoring tool to enhance cybersecurity & risk management",
     image: "/placeholder.svg",
-    tags: ["React", "Node.js", "MongoDB", "Express"]
+    tags: ["HTML", "CSS", "JavaScript", "Python", "Flask", "MongoDB"],
+    githubUrl: "https://github.com/Dhruthi"
   },
   {
     id: "2",
-    title: "Task Management App",
-    description: "A collaborative task management application with real-time updates and notifications",
+    title: "Maize Plant Disease Detection",
+    description: "Developed a Deep Learning ResNet model to detect plant diseases with 94% accuracy using the Maize Leaf dataset",
     image: "/placeholder.svg",
-    tags: ["React", "Firebase", "Tailwind CSS"]
+    tags: ["Python", "TensorFlow", "Deep Learning"],
+    githubUrl: "https://github.com/Dhruthi"
   },
   {
     id: "3",
-    title: "Recipe Finder",
-    description: "An application that helps users find recipes based on available ingredients",
+    title: "Library Management System",
+    description: "Developed a software application to manage library resources and track borrowed items",
     image: "/placeholder.svg",
-    tags: ["React", "API Integration", "Styled Components"]
+    tags: ["Java", "Servlets"],
+    githubUrl: "https://github.com/Dhruthi"
   }
 ];
 
 const featuredArticles: ArticleProps[] = [
   {
     id: "1",
-    title: "Form Validation In React.js: Build A Reusable Custom Hook For Inputs And Error Handling",
+    title: "Vulnerability Assessment: Best Practices for Modern Applications",
     date: "January 27, 2023",
-    slug: "form-validation-react-custom-hook"
+    slug: "vulnerability-assessment-best-practices",
+    excerpt: "Learn about comprehensive vulnerability assessment methodologies and how to implement them in your organization."
   },
   {
     id: "2",
-    title: "Creating An Efficient Modal Component In React Using Hooks And Portals",
+    title: "Deep Learning for Image-Based Disease Detection in Agriculture",
     date: "January 29, 2023",
-    slug: "efficient-modal-react-hooks-portals"
+    slug: "deep-learning-agriculture-disease-detection",
+    excerpt: "Exploring how machine learning and computer vision are revolutionizing agricultural practices through automated disease detection."
   },
   {
     id: "3",
-    title: "Redux Simplified: A Beginner's Guide For Web Developers",
+    title: "API Security Testing: Common Vulnerabilities and Countermeasures",
     date: "January 31, 2023",
-    slug: "redux-simplified-beginners-guide"
+    slug: "api-security-testing",
+    excerpt: "A comprehensive guide to identifying and addressing security flaws in API implementations."
   }
 ];
 
@@ -65,7 +71,7 @@ const Index = () => {
               <div>
                 <h2 className="text-3xl font-bold font-display mb-2">Featured Projects</h2>
                 <p className="text-muted-foreground max-w-2xl">
-                  Explore my recent work that showcases my development skills and expertise
+                  Explore my recent work that showcases my development and security skills
                 </p>
               </div>
               <Button asChild variant="ghost" className="hidden md:flex">
@@ -100,9 +106,9 @@ const Index = () => {
                       ))}
                     </div>
                     <Button asChild variant="outline" size="sm">
-                      <Link to={`/projects/${project.id}`}>
-                        View Project
-                      </Link>
+                      <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                        View on GitHub
+                      </a>
                     </Button>
                   </div>
                 </div>
@@ -126,7 +132,7 @@ const Index = () => {
               <div>
                 <h2 className="text-3xl font-bold font-display mb-2">Latest Articles</h2>
                 <p className="text-muted-foreground max-w-2xl">
-                  Technical articles, tutorials, and insights on web development
+                  Technical articles, tutorials, and insights on cybersecurity and development
                 </p>
               </div>
               <Button asChild variant="ghost" className="hidden md:flex">
@@ -167,9 +173,9 @@ const Index = () => {
                     <path d="M12 17.75l-6.172 3.245l1.179-6.873l-5-4.867l6.9-1l3.086-6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-semibold mb-2">15+ Projects</h3>
+                <h3 className="text-xl font-semibold mb-2">Certifications</h3>
                 <p className="text-muted-foreground">
-                  Successfully completed projects for clients across industries
+                  EC-Council Certified Ethical Hacker, Microsoft Security Fundamentals, and more
                 </p>
               </div>
               
@@ -182,9 +188,9 @@ const Index = () => {
                     <line x1="3" x2="21" y1="10" y2="10"/>
                   </svg>
                 </div>
-                <h3 className="text-xl font-semibold mb-2">5+ Years</h3>
+                <h3 className="text-xl font-semibold mb-2">Experience</h3>
                 <p className="text-muted-foreground">
-                  Professional experience in web development and design
+                  Professional experience at Flipkart, DAZN India, and ICRISAT
                 </p>
               </div>
               
@@ -198,9 +204,9 @@ const Index = () => {
                     <path d="m5 3 3.35 3.45L12 3"/>
                   </svg>
                 </div>
-                <h3 className="text-xl font-semibold mb-2">10+ Technologies</h3>
+                <h3 className="text-xl font-semibold mb-2">Technical Skills</h3>
                 <p className="text-muted-foreground">
-                  Proficient in a wide range of modern web technologies
+                  Proficient in a wide range of security testing tools and programming languages
                 </p>
               </div>
             </div>
@@ -224,9 +230,9 @@ const Index = () => {
                 Have a project in mind? I'm available for freelance work and full-time positions.
               </p>
               <Button asChild size="lg">
-                <Link to="/contact">
+                <a href="https://www.linkedin.com/in/gundavarapu-dhruthi" target="_blank" rel="noopener noreferrer">
                   Get in touch
-                </Link>
+                </a>
               </Button>
             </div>
           </div>

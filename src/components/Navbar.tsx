@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { ThemeToggle } from "./ThemeToggle";
@@ -50,45 +51,47 @@ export const Navbar = () => {
         scrolled ? "bg-background/95 backdrop-blur-sm shadow-sm" : "bg-transparent"
       }`}
     >
-      <nav className="container mx-auto px-4 md:px-6 py-4 flex items-center">
-        <Link to="/" className="text-xl font-bold font-display mr-8">
-          <div className="flex items-center justify-center w-10 h-10 rounded-full bg-foreground text-background">
-            GS
+      <nav className="container mx-auto px-4 md:px-6 py-4">
+        <div className="flex items-center">
+          <Link to="/" className="text-xl font-bold font-display">
+            <div className="flex items-center justify-center w-10 h-10 rounded-full bg-foreground text-background">
+              GS
+            </div>
+          </Link>
+
+          {/* Desktop Navigation - Moved to the left */}
+          <div className="hidden md:flex items-center ml-6 space-x-4">
+            {navLinks.map((link) => (
+              <Link
+                key={link.name}
+                to={link.path}
+                className={`nav-link ${
+                  location.pathname === link.path ? "active" : ""
+                }`}
+              >
+                {link.name}
+              </Link>
+            ))}
           </div>
-        </Link>
 
-        {/* Desktop Navigation - Now closer to logo */}
-        <div className="hidden md:flex items-center space-x-6">
-          {navLinks.map((link) => (
-            <Link
-              key={link.name}
-              to={link.path}
-              className={`nav-link ${
-                location.pathname === link.path ? "active" : ""
-              }`}
-            >
-              {link.name}
-            </Link>
-          ))}
-        </div>
+          <div className="flex items-center space-x-2 ml-auto">
+            <div className="hidden md:flex">
+              <SocialIcons />
+            </div>
+            <ThemeToggle />
 
-        <div className="flex items-center space-x-2 ml-auto">
-          <div className="hidden md:flex">
-            <SocialIcons />
-          </div>
-          <ThemeToggle />
-
-          {/* Mobile Menu Button */}
-          <div className="md:hidden">
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={toggleMenu}
-              aria-label="Toggle Menu"
-              className="rounded-full ml-1"
-            >
-              <Menu size={20} />
-            </Button>
+            {/* Mobile Menu Button */}
+            <div className="md:hidden">
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={toggleMenu}
+                aria-label="Toggle Menu"
+                className="rounded-full ml-1"
+              >
+                <Menu size={20} />
+              </Button>
+            </div>
           </div>
         </div>
       </nav>

@@ -3,7 +3,6 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
 
 interface Project {
   id: string;
@@ -11,8 +10,7 @@ interface Project {
   description: string;
   image: string;
   tags: string[];
-  demoUrl?: string;
-  codeUrl?: string;
+  githubUrl: string;
   featured?: boolean;
 }
 
@@ -22,60 +20,38 @@ const Projects = () => {
   const projects: Project[] = [
     {
       id: "1",
-      title: "E-Commerce Platform",
-      description: "A fully responsive e-commerce platform built with React, Node.js, and MongoDB",
+      title: "Attack Surface Monitoring Tool",
+      description: "Developed an interactive UI for a comprehensive security monitoring tool to enhance cybersecurity & risk management. Integrated features like subdomain enumeration, port scanning, SSL verification, cloud enumeration, GitHub secret scanning, Shodan API, and vulnerability analysis.",
       image: "/placeholder.svg",
-      tags: ["React", "Node.js", "MongoDB", "Express"],
-      demoUrl: "#",
-      codeUrl: "#",
+      tags: ["HTML", "CSS", "JavaScript", "Python", "Flask", "MongoDB"],
+      githubUrl: "https://github.com/Dhruthi",
       featured: true
     },
     {
       id: "2",
-      title: "Task Management App",
-      description: "A collaborative task management application with real-time updates and notifications",
+      title: "Maize Plant Disease Detection",
+      description: "Developed a Deep Learning ResNet model to detect plant diseases with 94% accuracy using the Maize Leaf dataset. Enhanced detection accuracy through hyper-parameter optimization for real-world applicability.",
       image: "/placeholder.svg",
-      tags: ["React", "Firebase", "Tailwind CSS"],
-      demoUrl: "#",
-      codeUrl: "#",
+      tags: ["Python", "TensorFlow", "Deep Learning"],
+      githubUrl: "https://github.com/Dhruthi",
       featured: true
     },
     {
       id: "3",
-      title: "Recipe Finder",
-      description: "An application that helps users find recipes based on available ingredients",
+      title: "Library Management System",
+      description: "Developed a software application to manage library resources and track borrowed items. Implemented user authentication and access control features, ensuring data security and user privacy.",
       image: "/placeholder.svg",
-      tags: ["React", "API Integration", "Styled Components"],
-      demoUrl: "#",
-      codeUrl: "#",
+      tags: ["Java", "Servlets"],
+      githubUrl: "https://github.com/Dhruthi",
       featured: true
     },
     {
       id: "4",
-      title: "Weather Dashboard",
-      description: "A weather dashboard that displays current and forecasted weather conditions",
+      title: "Deep Inventory Management System",
+      description: "Developed a modern system integrating deep learning for precise object detection, optimizing supply-chain operations. Leveraged advanced object detection algorithms to enhance inventory tracking accuracy and reduce operational delays.",
       image: "/placeholder.svg",
-      tags: ["JavaScript", "API Integration", "CSS"],
-      demoUrl: "#",
-      codeUrl: "#"
-    },
-    {
-      id: "5",
-      title: "Budget Tracker",
-      description: "A personal finance application to track income, expenses, and savings goals",
-      image: "/placeholder.svg",
-      tags: ["React", "Chart.js", "localStorage"],
-      demoUrl: "#",
-      codeUrl: "#"
-    },
-    {
-      id: "6",
-      title: "Movie Database",
-      description: "A movie database application with search functionality and user reviews",
-      image: "/placeholder.svg",
-      tags: ["React", "API Integration", "Firebase"],
-      demoUrl: "#",
-      codeUrl: "#"
+      tags: ["Python", "Deep Learning", "Object Detection"],
+      githubUrl: "https://github.com/Dhruthi"
     }
   ];
   
@@ -96,7 +72,7 @@ const Projects = () => {
             <div className="max-w-4xl mx-auto text-center mb-12">
               <h1 className="text-4xl font-bold font-display mb-4">My Projects</h1>
               <p className="text-muted-foreground text-lg">
-                A collection of my web development projects, showcasing my skills and experience.
+                A collection of my cybersecurity and development projects, showcasing my skills and experience.
               </p>
             </div>
             
@@ -149,23 +125,11 @@ const Projects = () => {
                         </span>
                       ))}
                     </div>
-                    <div className="flex gap-3">
-                      {project.demoUrl && (
-                        <Button asChild variant="default" size="sm">
-                          <a href={project.demoUrl} target="_blank" rel="noopener noreferrer">
-                            Live Demo
-                          </a>
-                        </Button>
-                      )}
-                      
-                      {project.codeUrl && (
-                        <Button asChild variant="outline" size="sm">
-                          <a href={project.codeUrl} target="_blank" rel="noopener noreferrer">
-                            View Code
-                          </a>
-                        </Button>
-                      )}
-                    </div>
+                    <Button asChild variant="default" size="sm">
+                      <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                        View on GitHub
+                      </a>
+                    </Button>
                   </div>
                 </div>
               ))}
@@ -198,9 +162,9 @@ const Projects = () => {
                 I'm always open to discussing new projects and opportunities.
               </p>
               <Button asChild size="lg">
-                <Link to="/contact">
+                <a href="https://www.linkedin.com/in/gundavarapu-dhruthi" target="_blank" rel="noopener noreferrer">
                   Get in touch
-                </Link>
+                </a>
               </Button>
             </div>
           </div>
