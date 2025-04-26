@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { ThemeToggle } from "./ThemeToggle";
@@ -51,17 +50,15 @@ export const Navbar = () => {
         scrolled ? "bg-background/95 backdrop-blur-sm shadow-sm" : "bg-transparent"
       }`}
     >
-      <nav className="container mx-auto px-4 md:px-6 py-4 flex items-center justify-between">
-        <div className="flex items-center">
-          <Link to="/" className="text-xl font-bold font-display">
-            <div className="flex items-center justify-center w-10 h-10 rounded-full bg-foreground text-background">
-              AR
-            </div>
-          </Link>
-        </div>
+      <nav className="container mx-auto px-4 md:px-6 py-4 flex items-center">
+        <Link to="/" className="text-xl font-bold font-display mr-8">
+          <div className="flex items-center justify-center w-10 h-10 rounded-full bg-foreground text-background">
+            GS
+          </div>
+        </Link>
 
-        {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center space-x-8">
+        {/* Desktop Navigation - Now closer to logo */}
+        <div className="hidden md:flex items-center space-x-6">
           {navLinks.map((link) => (
             <Link
               key={link.name}
@@ -75,7 +72,7 @@ export const Navbar = () => {
           ))}
         </div>
 
-        <div className="flex items-center space-x-2">
+        <div className="flex items-center space-x-2 ml-auto">
           <div className="hidden md:flex">
             <SocialIcons />
           </div>
@@ -107,7 +104,7 @@ export const Navbar = () => {
             <div className="flex justify-between items-center mb-10">
               <Link to="/" className="text-xl font-bold font-display" onClick={closeMenu}>
                 <div className="flex items-center justify-center w-10 h-10 rounded-full bg-foreground text-background">
-                  AR
+                  GS
                 </div>
               </Link>
               <Button

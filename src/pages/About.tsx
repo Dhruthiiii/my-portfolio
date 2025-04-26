@@ -4,44 +4,53 @@ import { Footer } from "@/components/Footer";
 
 const About = () => {
   const skills = [
-    { category: "Frontend", items: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Redux"] },
-    { category: "Backend", items: ["Node.js", "Express", "GraphQL", "REST API", "MongoDB", "PostgreSQL"] },
-    { category: "Tools & Others", items: ["Git", "Docker", "AWS", "CI/CD", "Jest", "Figma"] }
+    { 
+      category: "Languages & Technologies", 
+      items: ["HTML", "CSS", "JavaScript", "C", "PHP", "Java", "Python"] 
+    },
+    { 
+      category: "Security Tools", 
+      items: ["Kali Linux", "Burp Suite", "Metasploit", "NMap", "OWASP Zap", "Wireshark"] 
+    },
+    { 
+      category: "Frameworks & Tools", 
+      items: ["TensorFlow", "Keras", "Flask", "Git", "VS Code", "MongoDB", "MySQL"] 
+    }
   ];
   
   const experiences = [
     {
-      company: "Tech Innovations Inc.",
-      position: "Senior Frontend Developer",
-      period: "2021 - Present",
-      description: "Lead developer for multiple client projects, focusing on React and TypeScript. Implemented CI/CD pipelines and mentored junior developers."
+      company: "Flipkart",
+      position: "Application Security Engineer",
+      period: "Oct 2024 - April 2025",
+      description: "Performed VAPT on Web and Android applications, networks, and cloud servers. Worked with Business Units to optimize security workflows and implement controls."
     },
     {
-      company: "WebSolutions Agency",
-      position: "Full Stack Developer",
-      period: "2018 - 2021",
-      description: "Developed and maintained web applications using the MERN stack. Collaborated with designers to transform mockups into fully functional interfaces."
+      company: "Dazn India",
+      position: "Technical Support Specialist",
+      period: "Nov 2023 - Oct 2024",
+      description: "Monitored live sports activities, managed platform performance, and resolved technical issues using various tools including ServiceNow, CloudFlare VPN, and AWS."
     },
     {
-      company: "Digital Creatives",
-      position: "Junior Web Developer",
-      period: "2016 - 2018",
-      description: "Built responsive websites and implemented features using JavaScript and React. Assisted with UX improvements and bug fixes."
+      company: "ICRISAT",
+      position: "Deep Learning Engineer Intern",
+      period: "May 2023 - July 2023",
+      description: "Conducted R&D on Image-based Disease Identification, achieving 94% accuracy in Maize Leaf Disease detection using Mask R-CNN."
     }
   ];
   
   const education = [
     {
-      institution: "University of Technology",
-      degree: "BSc in Computer Science",
-      period: "2012 - 2016",
-      description: "Specialized in web development and software engineering. Active member of the coding club."
+      institution: "Indian Institute of Technology Guwahati",
+      degree: "Diploma in Cyber Security",
+      period: "August 2024 - Ongoing",
+      description: "Currently pursuing advanced studies in cybersecurity technologies and practices."
     },
     {
-      institution: "Online Learning",
-      degree: "Various Certifications",
-      period: "2016 - Present",
-      description: "Continuously improving skills through platforms like Coursera, Udemy, and freeCodeCamp."
+      institution: "Keshav Memorial Institute of Technology",
+      degree: "B.Tech in Computer Science Engineering",
+      period: "August 2019 - July 2023",
+      description: "CGPA: 7.7 - Focused on computer science fundamentals and specialized in security concepts."
     }
   ];
 
