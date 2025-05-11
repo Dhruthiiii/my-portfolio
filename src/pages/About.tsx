@@ -1,4 +1,3 @@
-
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 
@@ -50,25 +49,29 @@ const About = () => {
       institution: "Indian Institute of Technology Guwahati",
       degree: "Diploma in Cyber Security",
       period: "August 2024 - Ongoing",
-      description: "Currently pursuing advanced studies in cybersecurity technologies and practices in Guwahati, Assam."
+      description: "Currently pursuing advanced studies in cybersecurity technologies and practices in Guwahati, Assam.",
+      image: "/images/iitg.png"
     },
     {
       institution: "Keshav Memorial Institute of Technology",
       degree: "Bachelor of Technology in Computer Science Engineering",
       period: "August 2019 - July 2023",
-      description: "CGPA: 7.7 - Focused on computer science fundamentals and specialized in security concepts in Hyderabad, Telangana."
+      description: "Focused on computer science fundamentals and specialized in security concepts in Hyderabad, Telangana.",
+      image: "/images/kmit.png"
     },
     {
       institution: "Sri Chaitanya Junior College",
       degree: "Intermediate",
       period: "August 2017 - May 2019",
-      description: "Percentage: 94%, Hyderabad, Telangana"
+      description: "Hyderabad, Telangana",
+      image: "/images/srichaitanya.png"
     },
     {
       institution: "St. Paul's High School",
       degree: "State Board",
       period: "Completed May 2017",
-      description: "GPA: 9.3, Hyderabad, Telangana"
+      description: "Hyderabad, Telangana",
+      image: "/images/stpauls.png"
     }
   ];
 
@@ -152,15 +155,17 @@ const About = () => {
               
               <div className="space-y-8">
                 {education.map((edu, index) => (
-                  <div key={index} className="relative pl-8 border-l-2 border-border pb-8 last:pb-0">
-                    <div className="absolute left-[-9px] top-0 w-4 h-4 rounded-full bg-primary"></div>
-                    <h3 className="text-xl font-semibold mb-1">{edu.degree}</h3>
-                    <div className="flex flex-col md:flex-row md:items-center text-muted-foreground mb-2">
-                      <span>{edu.institution}</span>
-                      <span className="hidden md:block mx-2">•</span>
-                      <span>{edu.period}</span>
+                  <div key={index} className="relative pl-8 border-l-2 border-border pb-8 last:pb-0 flex items-center gap-6">
+                    <img src={edu.image} alt={edu.institution + ' logo'} className="w-20 h-20 object-contain rounded-md border bg-white" />
+                    <div>
+                      <h3 className="text-xl font-semibold mb-1">{edu.degree}</h3>
+                      <div className="flex flex-col md:flex-row md:items-center text-muted-foreground mb-2">
+                        <span>{edu.institution}</span>
+                        <span className="hidden md:block mx-2">•</span>
+                        <span>{edu.period}</span>
+                      </div>
+                      <p className="text-sm md:text-base">{edu.description}</p>
                     </div>
-                    <p className="text-sm md:text-base">{edu.description}</p>
                   </div>
                 ))}
               </div>

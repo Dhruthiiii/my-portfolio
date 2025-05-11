@@ -31,7 +31,7 @@ export const HeroSection = () => {
                 </a>
               </Button>
             </div>
-            <SocialIcons />
+           
           </div>
           <div className="md:w-1/3 flex justify-center md:justify-end">
             <div className="relative w-full max-w-md">
